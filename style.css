@@ -1,0 +1,63 @@
+/* Custom Scrollbar for a sleek theme */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0f111a;
+}
+::-webkit-scrollbar-thumb {
+    background: #3b3f5c;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #5b628c;
+}
+
+/* Base Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ensure crisp pixel rendering for your PNGs */
+.pixel-art {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+/* Flipped class for direction changes */
+.flipped {
+    transform: scaleX(-1);
+}
+
+/* Table panic shake */
+@keyframes panic-shake {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    20% { transform: translate(-2px, 1px) rotate(-1deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    60% { transform: translate(-1px, 2px) rotate(0deg); }
+    80% { transform: translate(2px, 1px) rotate(1deg); }
+}
+
+.table-panic {
+    animation: panic-shake 0.15s linear infinite;
+}
+
+/* Floating card effect when bunnies scatter */
+@keyframes throw-card {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-80px) translateX(var(--x-offset, 20px)) rotate(var(--rot-offset, 45deg)); opacity: 0; }
+}
+
+.flying-card {
+    animation: throw-card 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* Custom transitions for elements revealed during scroll */
+.reveal-on-scroll {
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-on-scroll.active {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}

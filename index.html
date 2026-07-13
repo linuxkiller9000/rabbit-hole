@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cozy Rabbit Hole 🐇</title>
+    <!-- Tailwind CSS for modern, rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-b from-[#1a1c2e] via-[#0f111a] to-[#07080c] text-slate-200 overflow-x-hidden font-sans">
+
+    <!-- Hero Section: The Rabbit Hole Entrance -->
+    <section class="relative w-full h-screen flex flex-col items-center justify-center text-center px-4 overflow-hidden">
+        <!-- Background Ambient Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <!-- Welcome Header -->
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-300 mb-4 drop-shadow">
+            Welcome to the Rabbit Hole
+        </h1>
+        <p class="text-lg md:text-xl text-purple-200/80 max-w-xl mb-8">
+            A quiet place made just for you. Take a deep breath, look around, and scroll down to explore.
+        </p>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 flex flex-col items-center animate-bounce">
+            <span class="text-xs uppercase tracking-widest text-purple-300/60 mb-2">Scroll Down</span>
+            <svg class="w-6 h-6 text-purple-300/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div class="absolute">
+    </section>
+
+    <!-- Interactive Interactive Zone Section -->
+    <section class="relative w-full min-h-screen py-20 px-6 flex flex-col items-center justify-center">
+        <!-- Interactive Canvas Container (Bunnies live here!) -->
+        <div id="canvas-container" class="relative w-full max-w-5xl h-[500px] md:h-[600px] bg-slate-900/40 backdrop-blur-md rounded-3xl border border-white/5 shadow-2xl overflow-hidden cursor-crosshair">
+            
+            <!-- Mouse Sniffer Instructions -->
+            <div class="absolute top-4 left-4 z-10 pointer-events-none bg-slate-950/60 px-3 py-1.5 rounded-full border border-white/10">
+                <span class="text-xs text-purple-300 flex items-center gap-1.5">
+                    ✨ Move your cursor inside (or tap) to guide the bunnies!
+                </span>
+            </div>
+
+            <!-- Card Playing Bunnies Interactive Spot -->
+            <div id="card-game-zone" class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 transition-transform duration-300">
+                <!-- We'll populate this with our interactive SVG bunnies via JavaScript -->
+            </div>
+
+            <!-- Mouse Tracker Sniffing Bunny elements will be appended here dynamically -->
+        </div>
+    </section>
+
+    <!-- Scrollable Comfort & Messages Section -->
+    <section class="relative w-full min-h-screen py-32 px-4 flex flex-col items-center justify-center gap-24">
+        <!-- Message Card 1 -->
+        <div class="reveal-on-scroll max-w-2xl w-full bg-slate-900/30 p-8 rounded-2xl border border-white/5 backdrop-blur-sm shadow-lg text-center transform transition-all duration-700 opacity-0 translate-y-10">
+            <span class="text-3xl mb-4 block">🥕</span>
+            <h3 class="text-2xl font-bold text-pink-200 mb-3">You're Doing Great</h3>
+            <p class="text-slate-400 leading-relaxed">
+                Sometimes the weight of everything feels too heavy, and that is completely okay. You don't have to figure everything out today. Just take it one hop at a time.
+            </p>
+        </div>
+
+        <!-- Message Card 2 -->
+        <div class="reveal-on-scroll max-w-2xl w-full bg-slate-900/30 p-8 rounded-2xl border border-white/5 backdrop-blur-sm shadow-lg text-center transform transition-all duration-700 opacity-0 translate-y-10">
+            <span class="text-3xl mb-4 block">🌾</span>
+            <h3 class="text-2xl font-bold text-purple-200 mb-3">Your Pack Has Your Back</h3>
+            <p class="text-slate-400 leading-relaxed">
+                Your friends are right here beside you. Whenever you need to talk, sit in silence, or just watch silly bunnies play cards, we are here for you.
+            </p>
+        </div>
+
+        <!-- Message Card 3 -->
+        <div class="reveal-on-scroll max-w-2xl w-full bg-slate-900/30 p-8 rounded-2xl border border-white/5 backdrop-blur-sm shadow-lg text-center transform transition-all duration-700 opacity-0 translate-y-10">
+            <span class="text-3xl mb-4 block">🌙</span>
+            <h3 class="text-2xl font-bold text-indigo-200 mb-3">Rest is Progress</h3>
+            <p class="text-slate-400 leading-relaxed">
+                Close your eyes for a second. Let go of the tension in your shoulders. You are valued, you are appreciated, and you are never alone.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full py-8 text-center border-t border-white/5 text-xs text-slate-500">
+        Made with love by your friends group chat 💜
+    </footer>
+
+    <!-- Core Interactive Script -->
+    <script src="script.js"></script>
+</body>
+</html>
